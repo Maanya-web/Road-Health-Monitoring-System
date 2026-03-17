@@ -1,0 +1,302 @@
+body {
+    padding-top: 64px; 
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+/* Navbar Container */
+.navbar-container {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    padding: 10px 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 
+                0 1px 8px rgba(0, 0, 0, 0.1),
+                inset 0 -1px 0 rgba(255, 255, 255, 0.5);
+    height: 100px;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100vw; /* Use viewport width instead of 100% */
+    max-width: 100vw; /* Ensure it doesn't exceed viewport */
+    overflow: hidden; /* Prevent any internal overflow */
+}
+
+/* Compact style when scrolled */
+.navbar-container.scrolled {
+    height: 56px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08), 
+                0 1px 6px rgba(0, 0, 0, 0.06),
+                inset 0 -1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.navbar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+/* Logo and Text Section */
+.navbar-logo-section {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    max-width: 60%; /* Constrain logo section width */
+    overflow: hidden; /* Prevent logo overflow */
+}
+
+.navbar-logo-section:hover {
+    transform: translateY(-2px);
+}
+
+.navbar-logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 100%; /* Ensure link doesn't overflow */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.navbar-logo-img {
+    height: 80px;
+    width: auto;
+
+}
+
+
+
+.navbar-logo-text {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-left: 40px;
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+    max-width: 100%; /* Constrain text width */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Show ellipsis if text is too long */
+}
+
+/* Tweak logo sizing when scrolled */
+.navbar-container.scrolled .navbar-logo-img {
+    height: 32px;
+}
+.navbar-container.scrolled .navbar-logo-text {
+    font-size: 1.25rem;
+}
+
+.logo-highlight {
+    color: #3498db;
+    position: relative;
+    display: inline-block;
+}
+
+.logo-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 3px;
+    transform: scaleX(0.9);
+    transition: all 0.3s ease;
+}
+
+.navbar-logo-text:hover .logo-highlight::after {
+    transform: scaleX(1);
+    bottom: -3px;
+}
+
+/* Menu Section */
+.navbar-menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar-menu-list {
+    display: none;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.navbar-menu-item {
+    margin: 0;
+    position: relative;
+}
+
+.navbar-menu-link {
+    color: #2c3e50;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    background: transparent;
+}
+
+.navbar-menu-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(145deg, #f5f7fa, #e4e8eb);
+    border-radius: 8px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), 
+                -3px -3px 6px rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-menu-link:hover::before {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.navbar-menu-link:hover {
+    color: #3498db;
+}
+
+.navbar-menu-link-active {
+    color: #3498db;
+    position: relative;
+}
+
+.navbar-menu-link-active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Mobile Menu Icon */
+.navbar-mobile-menu-icon {
+    height: 28px;
+    width: 28px;
+    display: block;
+    cursor: pointer;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+    padding: 4px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #f5f7fa, #e4e8eb);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), 
+                -3px -3px 6px rgba(255, 255, 255, 0.8);
+}
+
+.navbar-mobile-menu-icon:hover {
+    transform: translateY(-2px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 
+                -5px -5px 10px rgba(255, 255, 255, 0.8);
+    color: #3498db;
+}
+
+/* Mobile Menu Open State */
+@media (max-width: 767px) {
+    .navbar-menu-list.mobile-open {
+        display: flex;
+        flex-direction: column;
+        position: fixed; 
+        top: 64px;
+        right: 20px;
+        background: linear-gradient(145deg, #ffffff, #e6e6e6);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), 
+                    -5px -5px 15px rgba(255, 255, 255, 0.8);
+        z-index: 1000;
+        animation: slideDown 0.3s ease-out;
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .navbar-container {
+        padding: 10px 24px;
+    }
+    
+    .navbar-menu-list {
+        display: flex;
+    }
+    
+    .navbar-mobile-menu-icon {
+        display: none;
+    }
+    
+    .navbar-logo-section {
+        max-width: 65%; /* Slightly more space on desktop */
+    }
+}
+
+/* Logo and Text Responsive Adjustments */
+@media (max-width: 1024px) {
+    .navbar-logo-text {
+        font-size: 1.25rem;
+    }
+    .navbar-logo-img {
+        height: 36px;
+    }
+    .navbar-logo-section {
+        max-width: 70%; /* More space on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-logo-text {
+        font-size: 1.125rem;
+    }
+    .navbar-logo-img {
+        height: 34px;
+    }
+    .navbar-logo-section {
+        max-width: 75%; /* More space on small screens */
+    }
+}
+
+@media (max-width: 640px) {
+    .navbar-logo-text {
+        display: none;
+    }
+    .navbar-logo-img {
+        height: 32px;
+    }
+    .navbar-logo-section {
+        max-width: 80%; /* Most space on very small screens */
+    }
+}

@@ -1,0 +1,198 @@
+.about-root {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #0f172a 0, #020617 55%, #020617 100%);
+  color: #e5e7eb;
+  padding: 3rem 1.5rem 4rem;
+  box-sizing: border-box;
+}
+
+.about-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.about-hero {
+  position: relative;
+  border-radius: 28px;
+  padding: 2.5rem 2.25rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.9));
+  border: 1px solid rgba(75, 85, 99, 0.7);
+  box-shadow: 0 28px 60px rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(26px);
+}
+
+.about-kicker {
+  font-size: 0.7rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #6b9dfc;
+  font-weight: 600;
+  margin-bottom: 0.85rem;
+}
+
+.about-hero-title {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 700;
+  color: #f9fafb;
+  margin-bottom: 0.85rem;
+}
+
+.about-hero-text {
+  max-width: 46rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #cbd5f5;
+}
+
+.about-section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.about-section-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(148, 163, 184, 0.8), rgba(55, 65, 81, 0.6), transparent);
+}
+
+.about-pillars-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 900px) {
+  .about-pillars-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.about-card {
+  border-radius: 22px;
+  padding: 1.4rem 1.5rem 1.5rem;
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.92));
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(20px);
+}
+
+.about-icon-circle {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.9rem;
+  background: radial-gradient(circle at 30% 0, rgba(148, 163, 184, 0.35), rgba(15, 23, 42, 0.9));
+  color: #e5e7eb;
+}
+
+.about-card-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #f9fafb;
+  margin-bottom: 0.3rem;
+}
+
+.about-card-text {
+  font-size: 0.86rem;
+  line-height: 1.7;
+  color: #e2e8f0;
+}
+
+.about-method-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 960px) {
+  .about-method-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.about-math-card {
+  border-radius: 22px;
+  padding: 1.5rem 1.6rem 1.4rem;
+  background: linear-gradient(140deg, rgba(15, 23, 42, 0.98), rgba(17, 24, 39, 0.94));
+  border: 1px solid rgba(55, 65, 81, 0.95);
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(22px);
+}
+
+.about-math-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #f9fafb;
+  margin-bottom: 0.35rem;
+}
+
+.about-math-body {
+  font-size: 0.86rem;
+  color: #e2e8f0;
+  line-height: 1.75;
+}
+
+.about-math-note {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.about-data-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 900px) {
+  .about-data-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.about-team-card {
+  border-radius: 18px;
+  padding: 1.15rem 1.4rem;
+  background: rgba(15, 23, 42, 0.98);
+  border: 1px solid rgba(55, 65, 81, 0.95);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(18px);
+}
+
+.about-team-title {
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.about-team-row {
+  font-size: 0.8rem;
+  color: #e5e7eb;
+}
+
+.about-team-label {
+  font-weight: 600;
+}
+
+.about-disclaimer {
+  border-top: 1px solid rgba(148, 163, 184, 0.4);
+  padding-top: 0.9rem;
+  font-size: 0.72rem;
+  color: #9ca3af;
+  text-align: center;
+}
+
