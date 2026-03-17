@@ -25,7 +25,7 @@ const Contact = () => {
     setSubmitStatus('loading');
 
     try {
-      const response = await fetch('https://monitoring-system-zr2z.onrender.com//api/inquiry', {
+      const response = await fetch('https://monitoring-system-zr2z.onrender.com/api/inquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
