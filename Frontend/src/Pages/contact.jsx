@@ -68,17 +68,7 @@ const Contact = () => {
               Project Headquarters
             </h2>
             
-            <div className="contact-info-list">
-              <div className="contact-info-item">
-                <div className="contact-icon-circle">
-                  <MapPin size={18} />
-                </div>
-                <div>
-                  <div className="contact-info-label">Institution</div>
-                  <div className="contact-info-value">Indian Institute of Technology (IIT), Indore</div>
-                  <div style={{ fontSize: '0.8rem', color: '#9ca3af', marginTop: '0.2rem' }}>Civil Engineering Department</div>
-                </div>
-              </div>
+            
 
               <div className="contact-info-item">
                 <div className="contact-icon-circle">
