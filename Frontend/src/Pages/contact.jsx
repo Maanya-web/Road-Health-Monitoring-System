@@ -68,7 +68,7 @@ const Contact = () => {
               Project Headquarters
             </h2>
             
-            
+            <div className="contact-info-list">
 
               <div className="contact-info-item">
                 <div className="contact-icon-circle">
